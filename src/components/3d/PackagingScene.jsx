@@ -34,15 +34,19 @@ function createCardboardTexture() {
   ctx.fillStyle = 'rgba(160, 120, 75, 0.4)';
   ctx.strokeRect(440, 0, 144, 1024);
 
+  const fontVariables = getComputedStyle(document.documentElement);
+  const displayFont = fontVariables.getPropertyValue('--font-plus-jakarta').trim() || 'sans-serif';
+  const sansFont = fontVariables.getPropertyValue('--font-inter').trim() || 'sans-serif';
+
   ctx.save();
   ctx.translate(512, 420);
   ctx.fillStyle = '#1A1815';
-  ctx.font = '900 44px "Plus Jakarta Sans", sans-serif';
+  ctx.font = `900 44px ${displayFont}`;
   ctx.textAlign = 'center';
   ctx.letterSpacing = '4px';
   ctx.fillText('AR PACKAGES', 0, 0);
 
-  ctx.font = 'bold 16px "Inter", sans-serif';
+  ctx.font = `bold 16px ${sansFont}`;
   ctx.fillStyle = '#3E2E1E';
   ctx.fillText('EST. 1999 • CORRUGATED CARTONS', 0, 30);
 
