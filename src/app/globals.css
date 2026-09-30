@@ -11,7 +11,7 @@
   body {
     color: rgb(var(--foreground-rgb));
     background: #F8F9FA;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
