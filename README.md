@@ -18,13 +18,13 @@ npm run dev
 
 Open `http://localhost:3000` to view the site.
 
-## Production checks
+## cPanel deployment
 
-Run the lint and optimized build before deployment:
+Create the static production site:
 
 ```bash
 npm run lint
-npm run build
+npm run build:cpanel
 ```
 
-Serve the generated production build with `npm run start`.
+Upload the **contents** of `out/` to your cPanel document root, usually `public_html/`. Include the hidden `.htaccess` file. The export contains static HTML for each route and does not require a Node.js application on the host.
